@@ -49,6 +49,24 @@ addFood(mashPotatoes[0], "#mashPotatoes").then(() => {
 });
 
 // Iteration 3 using async and await
+addFood(mashPotatoes[0], "#mashPotatoes").then(() => {
+  addFood(mashPotatoes[0], "#mashPotatoes").then(() => {
+    addFood(mashPotatoes[1], "#mashPotatoes").then(() => {
+      addFood(mashPotatoes[2], "#mashPotatoes").then(() => {
+        addFood(mashPotatoes[3], "#mashPotatoes").then(() => {
+          addFood(mashPotatoes[4], "#mashPotatoes").then(() => {
+            console.log("Mashed potatoes finished.");
+            document.querySelector(
+              "#table"
+            ).innerHTML += `<img src='/public/images/mashPotatoes.jpg'/>`;
+          });
+        });
+      });
+    });
+  });
+
+  addFood(mashPotatoes[1], "#mashPotatoes");
+});
 
 async function makeFood(step) {
   // ... your code here
